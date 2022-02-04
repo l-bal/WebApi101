@@ -1,3 +1,5 @@
+using WebApi101.API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapEndpoints();
 
 var summaries = new[]
 {
